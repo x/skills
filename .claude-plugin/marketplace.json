@@ -1,0 +1,15 @@
+{
+  "name": "x-skills",
+  "owner": {
+    "name": "Devon Peticolas",
+    "email": "devon.peticolas@scale.com"
+  },
+  "description": "Devon's personal Claude Code skills marketplace.",
+  "plugins": [
+    {
+      "name": "x",
+      "source": "./plugins/x",
+      "description": "Devon's personal skills, namespaced under x:."
+    }
+  ]
+}
