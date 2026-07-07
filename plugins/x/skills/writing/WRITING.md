@@ -2,21 +2,11 @@
 
 ## Purpose
 
-Write for the actual context.
+Write for the context.
 
 The goal is prose that fits the medium, the task, and the reader. If it does that well, it will usually read as human-authored as a side effect. Do not optimize for "sounding human." Do not optimize for beating detectors. Both produce worse writing.
 
 Some rules below are prose-quality defaults. Some target common chatbot defaults. They are not the same thing.
-
-## Detector limits
-
-AI text detectors are probabilistic classifiers, not proof of authorship. Research and public guidance agree on a few things:
-- no single stylistic feature is a reliable AI tell
-- modern detectors use many signals at once: predictability, repetition, structure, classifiers, and sometimes provenance-like features
-- false positives are real, especially for short text, generic or formal prose, mixed human+AI text, multilingual text, and writing by people using English as an additional language
-- paraphrasing and human revision can reduce detection rates, so detector results are fragile
-
-Operationally: do not treat any word list, punctuation habit, or sentence pattern as decisive; do not promise detector safety. Separate proof from perception: a cue can be weak evidence of AI use yet still be a strong social signal if readers now associate it with pasted chatbot output. Style rules can reduce those cues; they cannot certify authorship.
 
 ## Precedence
 
@@ -44,7 +34,7 @@ This document is for drafting and revising text. It is not a reliable method for
 
 ## Medium routing
 
-- Chat, comments, replies, DMs, forum posts: running prose by default. Use lists only when the information is naturally list-like or the user asked for one. Avoid decorative formatting and canned support tone. In plain-text contexts such as chat, comments, casual Markdown, and most text typed straight into editors, prefer straight ASCII quotes and apostrophes by default. Curly quotes, curly apostrophes, single-character ellipses, and similar typesetting artifacts often read like pasted or auto-formatted text rather than native internet prose. They are fine in typeset or publication-facing prose. If text arrived by copy-paste, normalize it before sending. In the same contexts, prefer commas, colons, or full stops over em dashes unless the dash clearly earns its keep.
+- Chat, comments, replies, DMs, forum posts: running prose by default. Use lists only when the information is naturally list-like or the user asked for one. Avoid decorative formatting and canned support tone. In plain-text contexts such as chat, comments, casual Markdown, and most text typed straight into editors, prefer straight ASCII quotes and apostrophes by default. Curly quotes, curly apostrophes, single-character ellipses, and similar typesetting artifacts often read like pasted or auto-formatted text rather than native internet prose. They are fine in typeset or publication-facing prose. If text arrived by copy-paste, normalize it before sending. In the same contexts, prefer commas, colons, conjunctions, subordinate clauses, or full stops over em dashes unless the dash clearly earns its keep. Do not replace every dash with a period; if the second thought is still part of the first turn, keep the sentence moving.
 - Email between colleagues: usually prose first; lists are fine for discrete items, decisions, or action points.
 - Documents, specs, reports, technical writing: structure is expected. Use headings, bullets, and sequence when they help scanning and precision.
 - Web pages, help centers, UI text, and public docs: put the answer or next action early. Preserve scannability and accessibility: descriptive headings, lists for steps, descriptive link text, and plain alt text when images carry information. Do not flatten useful structure just to avoid looking templated.
@@ -54,11 +44,11 @@ This document is for drafting and revising text. It is not a reliable method for
 
 These are not AI tells by themselves: em dashes, semicolons, `however`, competent punctuation, well-formed paragraphs, and the right word even if it appears on somebody's banned list.
 
-Do not invent typos. Do not break grammar on purpose. Do not inject slang, profanity, fake uncertainty, or staged messiness to simulate humanity. No mandatory `actually` turn. No manufactured negativity. No programmatic sentence-length wobble.
+Do not invent typos. Do not break grammar on purpose. Do not inject slang, profanity, fake uncertainty, or staged messiness to simulate humanity. No mandatory `actually` turn. No manufactured negativity. No programmatic sentence-length wobble. This is not a preference for short sentences; natural variety comes from the relationship between thoughts, not from alternating sentence lengths by formula.
 
 Do not make text less usable or less accessible in the name of sounding less AI-written. Removing needed headings, lists, descriptive links, citations, caveats, or next steps is not a style improvement.
 
-The recurring problem is regularity and mismatch, not any one feature. Use em dashes where they belong; do not reach for them as a default connective. If you keep using the same punctuation move in the same role, vary it rather than banning it. In casual internet prose, paragraph-after-paragraph em dashes are now a socially recognized AI cue, so prefer commas, colons, or full stops unless the dash clearly earns its keep.
+The recurring problem is regularity and mismatch, not any one feature. Use em dashes where they belong; do not reach for them as a default connective. If you keep using the same punctuation move in the same role, vary it rather than banning it. In casual internet prose, paragraph-after-paragraph em dashes are now a socially recognized AI cue, so prefer commas, colons, conjunctions, subordinate clauses, or full stops unless the dash clearly earns its keep. A full stop is not the automatic replacement; sometimes the fix is to make the relationship between the clauses clearer. For temporary compound modifiers, hyphenate before the noun and usually open after it; do not let the model turn every compound into a hyphenated unit.
 
 ## Core rules
 
@@ -109,9 +99,13 @@ If you cannot verify a claim, attribute it, soften it, or cut it.
 
 Do not chase synonyms for basic words like `problem`, `change`, `system`, `work`, or `people`. Repeat the ordinary word when it is the right word. Prefer `we changed it` to `the implementation of the change`, `latency dropped` to `a reduction in latency was observed`, and `applying the rule` to `the application of the rule`. Prefer actions happening to people over abstractions being observed by systems.
 
-### 6. Cohere through reference, not label spam
+### 6. Cohere through reference and sentence shape
 
 Use pronouns and continued reference when the reader can easily track them. Do not restate the full frame in every paragraph. Treat signpost openers like `Furthermore`, `Moreover`, `Additionally`, `Importantly`, and `Notably` as things to justify, not default sentence starters.
+
+Let closely related thoughts share a sentence when the relationship is tight. Use coordination for equal-weight thoughts (`and`, `but`, `so`), subordination for unequal ones (`because`, `although`, `when`, `if`, `which`, `that`), and colons or semicolons when the second clause explains, sharpens, or turns the first. A period should mark a real pause, shift, or emphasis, not merely the place where an adjacent thought happened to arrive.
+
+Do not turn every idea into its own sentence for crispness. Short sentences are useful when the break creates emphasis, gives the reader time, or marks a real turn; they become false crispness when neighboring sentences are only separated because the prose is afraid to keep moving. `The term works. It names the pattern.` is usually weaker than `The term works: it names the pattern.` The second version carries the relationship instead of making the reader reconstruct it.
 
 ### 7. Do not perform
 
@@ -144,13 +138,17 @@ Watch for repeated use of the same moves:
 - the same punctuation move in every paragraph
 - the same controlling metaphor or contrast returning until it feels too tidy
 - repeated thesis-like openings
-- stacked mini-sentences for impact
+- stacked mini-sentences for impact, especially when each sentence carries one adjacent thought that could have shared a sentence
 
 Three-item parallel lists still count. Changing `X, Y, Z, and W` to `X, Y, and Z` does not fix the underlying shape if the sentence is still doing list work. The fix is not random variation; it is to break the repeated pattern where it starts to dominate.
 
+One common over-correction is false crispness: splitting every clause into its own sentence to break regularity. For when to combine and when to keep the split, see rule 6.
+
 ### 11. Let the thought develop
 
-Longer pieces should not feel pre-solved. If the prose moves in a perfectly efficient straight line from claim to conclusion, it can feel rushed. Let the thought develop through a concrete example, a noticed detail, or a brief doubling-back when the material naturally allows it. A concrete example usually does this better than an artificial aside.
+Longer pieces should not feel pre-solved. If the prose moves in a perfectly efficient straight line from claim to conclusion, it can feel rushed. Let the thought develop through a concrete example, a noticed detail, a sentence that gathers related material, or a brief doubling-back when the material naturally allows it. A concrete example usually does this better than an artificial aside.
+
+Development can happen inside a sentence, not only across paragraphs. A cumulative sentence can start with the main claim and then add the reason, qualification, or consequence that belongs with it. Do not split that movement into separate sentences unless the break itself does useful work.
 
 ### 12. Choose structure consciously for longer pieces
 
@@ -185,7 +183,7 @@ Do not give one paragraph to each milestone or one paragraph to each topic bucke
 
 ### 14. Revise by reading and cutting
 
-Re-read as a first-time reader. Cut anything that is auditioning. Cut sentences whose only job is to announce the next sentence. Collapse paragraphs that restate each other. Replace the most generic clause in the piece with something specific or delete it. Most edits should make the text shorter.
+Re-read as a first-time reader. Cut anything that is auditioning. Cut sentences whose only job is to announce the next sentence. Collapse paragraphs that restate each other. Replace the most generic clause in the piece with something specific or delete it. Most edits should make the text shorter, but do not confuse concision with chopping: combining two tightly related sentences can be the cleaner edit when it restores the relationship between the thoughts.
 
 ## Required checks
 
@@ -195,7 +193,7 @@ For pieces up to about 150 words or three short paragraphs, run checks 1-5, 7, a
 2. Concrete-anchor audit. For each substantial paragraph, point to one concrete anchor. In criticism, reportage, reviews, and analysis, at least one paragraph in the whole piece should be built around a single concrete example or observed consequence rather than category summary. If you cannot point to that paragraph, add one.
 3. Fact discipline. Pick the three most fragile factual claims in the piece: dates, milestone names, quotes, close paraphrases, public metrics, future claims, causal trend claims, feature labels, motives, hidden system explanations, or claims sourced to vague authorities. If you cannot vouch for them, attribute them, soften them, or cut them. If a citation or source is present, confirm it supports the exact claim rather than a nearby topic.
 4. Source-fit check. For factual writing, check every exact quote, close paraphrase, public metric, planned/future event, and causal claim. Do not keep `X caused Y`, `X drove Y`, `X proved Y`, or `X tracked with Y` unless the source supports the relationship. Use weaker relationship language only when that weaker claim is still accurate.
-5. Regularity tripwire. Name the single most repeated visible pattern in the piece. If the same move appears 3 or more times, or dominates two consecutive paragraphs, rewrite at least one occurrence.
+5. Regularity and sentence-continuity tripwire. Name the single most repeated visible pattern in the piece. If the same move appears 3 or more times, or dominates two consecutive paragraphs, rewrite at least one occurrence. Also scan for false crispness: two or more neighboring short sentences whose thoughts are tightly related but split apart. If a comma, conjunction, subordinate clause, colon, or semicolon would express the relationship more naturally, combine one pair. If the period creates useful emphasis or clarity, keep it.
 6. Repeated-frame check. If a central metaphor, contrast, or wording family appears throughout the piece, decide whether it is a useful motif or a too-neat scaffold. Keep it only where it adds force; vary or cut the rest.
 7. Stance and voice. If the genre expects a visible writer or evaluative stance, state the writer's view in one sentence to yourself. If you cannot, add stance where it does real work. If the genre expects neutrality, did you keep it neutral?
 8. Developed thought. For any piece longer than four paragraphs, identify one place where the prose pauses, doubles back, or notices a concrete detail off the main line. If the piece runs in a perfectly straight line from claim to conclusion, see whether one example or noticed detail would make it less pre-solved.
@@ -209,6 +207,7 @@ These are tripwires, not goals. Use them to catch genericity, visible regularity
 Use these only when the required checks are not enough for a longer piece.
 - Paragraph spread. Count sentences in each paragraph. If nearly all land at the same count, vary one.
 - Sentence spread. Compare the shortest and longest sentences. If everything sits in the same medium band, vary one.
+- Sentence architecture audit. Look at sentence types, not only length. If most sentences are simple declaratives, combine one pair of close thoughts with coordination or subordination. If every sentence starts fresh instead of carrying reference forward, revise one sentence so it begins from the previous thought and ends with the new one.
 - Punctuation audit. If em dashes, colons, or parentheticals keep doing the same job, swap some for commas or full stops.
 - Lead audit. In web, docs, email, or task-oriented text, is the answer or requested action visible early? In analysis or criticism, is the first general claim tied to concrete evidence soon enough?
 - Hidden-list audit. Count sentences whose main work is listing three or more parallel items. If three or more sentences do list work, rewrite at least one around a single consequence, contrast, or example.
@@ -233,6 +232,9 @@ These are fallback heuristics, not targets to optimize for.
 - Catalog prose -> argument prose. Avoid: `First came change A, then change B, then change C.` Prefer: `The important shift was not that the thing accumulated more pieces. It was that later changes finally introduced friction where the earlier version let people coast.`
 - System-tour prose -> cross-wired prose. Avoid: one paragraph for `background`, one for `process`, one for `impact`, then a verdict. Prefer: trace one recurring constraint, show how it appears across the piece, and make the paragraphs depend on each other.
 - Rushed linearity -> developed thought. Avoid: `The plan changed. Results improved. Therefore it worked.` Prefer: `Results improved only after the review queue changed, which is why the earlier numbers were misleading.`
+- Choppy -> connected. Avoid: `The term does real work. It names a pattern that was floating unnamed.` Prefer: `The term does real work: it names a pattern that was floating unnamed.`
+- False crispness -> carried relationship. Avoid: `The uncertainty is real. The confident register wrapping it is a default.` Prefer: `The uncertainty is real, but the confident register wrapping it is a default.`
+- Period-as-dash replacement -> clearer clause relation. Avoid: `The post would land harder. It should stop at the number and draw the consequence directly.` Prefer: `The post would land harder if it stopped at the number and drew the consequence directly.`
 
 ## Optional audit reference
 
@@ -266,6 +268,7 @@ These are not bans. They are quick places to scan when default LLM writing slips
 - `proof of concept`
 - paragraph-closing type definitions (`the kind of X where Y`)
 - persuasive three-part cadence or triadic rhythm used by reflex (`clearer, faster, cheaper`)
+- one-thought-per-sentence strings where adjacent claims should be coordinated or subordinated
 - fake-human hedge chains (`I think... maybe... sort of`) when the uncertainty is not real
 - forced register lowering or inserted slang
 - decorative emoji and checkmark bullets in prose contexts
@@ -274,7 +277,33 @@ These are not bans. They are quick places to scan when default LLM writing slips
 ### Jargon defaults to scrutinize
 
 Use only when they are plainly the right words, not because the model fell into them:
-`delve into`, `tapestry`, `realm`, `leverage`, `harness`, `foster`, `empower`, `unlock`, `unveil`, `vibrant`, `crucial`, `pivotal`, `compelling`, `robust`, `seamless`, `holistic`, `multifaceted`, `paradigm-shifting`, `underscore`, `testament`, `valuable insights`, `rich`, `profound`, `enhance`, `showcase`, `boast` / `boasts`
+- `delve into`
+- `tapestry`
+- `realm`
+- `leverage`
+- `harness`
+- `foster`
+- `empower`
+- `unlock`
+- `unveil`
+- `vibrant`
+- `crucial`
+- `pivotal`
+- `compelling`
+- `robust`
+- `seamless`
+- `holistic`
+- `multifaceted`
+- `paradigm-shifting`
+- `underscore`
+- `testament`
+- `valuable insights`
+- `rich`
+- `profound`
+- `enhance`
+- `showcase`
+- `boast` / `boasts`
+- `substrate`
 
 The problem is repeated fallback diction, not the existence of any one word.
 
