@@ -1,13 +1,8 @@
 # The Elements of Style (excerpt)
 
-Reference material for the `x:writing` skill. `WRITING.md` is the operative ruleset; this file is depth on a few principles Strunk states better than any paraphrase, chiefly rule 17 on needless words, rule 14 on active voice, and rule 16 on concrete language.
+Reference for the `x:writing` skill. Consult a rule for depth on a principle, chiefly rule 17 on needless words, rule 14 on active voice, and rule 16 on concrete language.
 
-Two things to know before reading:
-
-- **`WRITING.md` wins on conflict.** Where this text and the ruleset disagree, follow the ruleset.
-- **Punctuation is normalized to house style.** The original rule 8 teaches the em dash at length; it is cut from this excerpt, and dashes in the retained text are rewritten as commas, colons, parentheses, or slashes. Do not treat the surviving examples as license to reintroduce it.
-
-Cut from the full text: the foreword and introduction, section I (elementary rules of usage), section III (matters of form), section IV (words commonly misused), the afterword, and the glossary. Section IV in particular targets 1959 usage errors and does not describe how an LLM fails.
+`WRITING.md` is the operative ruleset and wins on conflict.
 
 ---
 

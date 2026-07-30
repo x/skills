@@ -244,7 +244,7 @@ These are fallback heuristics, not targets to optimize for.
 
 ## Optional audit reference
 
-These are not bans. They are quick places to scan when default LLM writing slips into formula. It covers what needs judgment; purely mechanical string bans are enforced elsewhere and are not repeated here.
+These are not bans. They are quick places to scan when default LLM writing slips into formula.
 
 ### Formula phrases and sentence moves to scrutinize
 

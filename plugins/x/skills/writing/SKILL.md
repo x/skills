@@ -21,4 +21,4 @@ Above all, omit needless words. Never use this skill to make something short lon
 
 ## Reference
 
-`ELEMENTS_OF_STYLE.md` in this directory is an excerpt of Strunk and White, sections II and V only. Consult it for depth on a specific principle, e.g. rule 17 on needless words, rule 14 on active voice, rule 16 on concrete language. Do not read it end to end for every task, and do not imitate its period prose. `WRITING.md` wins on any conflict, including the em dash.
+`ELEMENTS_OF_STYLE.md` in this directory covers composition and style. Consult a specific rule for depth, e.g. rule 17 on needless words, rule 14 on active voice, rule 16 on concrete language. Do not read it end to end for every task, and do not imitate its period prose. `WRITING.md` wins on any conflict.
