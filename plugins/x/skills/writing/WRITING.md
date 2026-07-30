@@ -8,6 +8,12 @@ The goal is prose that fits the medium, the task, and the reader. If it does tha
 
 Some rules below are prose-quality defaults. Some target common chatbot defaults. They are not the same thing.
 
+## Scope: long-form only
+
+This ruleset is for pieces with room to develop: documents, specs, reports, technical writing, public docs, articles, criticism, retrospectives, PR descriptions, and long-form posts.
+
+It does not apply to short-form. Chat messages, DMs, comments, replies, and one-paragraph emails are out of scope; write those normally and do not run these checks on them. Several rules here, e.g. developed thought, through-line, paragraph spread, assume a piece long enough to have a shape, and forcing them onto a three-sentence reply makes it worse.
+
 ## Precedence
 
 When rules conflict:
@@ -34,21 +40,21 @@ This document is for drafting and revising text. It is not a reliable method for
 
 ## Medium routing
 
-- Chat, comments, replies, DMs, forum posts: running prose by default. Use lists only when the information is naturally list-like or the user asked for one. Avoid decorative formatting and canned support tone. In plain-text contexts such as chat, comments, casual Markdown, and most text typed straight into editors, prefer straight ASCII quotes and apostrophes by default. Curly quotes, curly apostrophes, single-character ellipses, and similar typesetting artifacts often read like pasted or auto-formatted text rather than native internet prose. They are fine in typeset or publication-facing prose. If text arrived by copy-paste, normalize it before sending. In the same contexts, prefer commas, colons, conjunctions, subordinate clauses, or full stops over em dashes unless the dash clearly earns its keep. Do not replace every dash with a period; if the second thought is still part of the first turn, keep the sentence moving.
-- Email between colleagues: usually prose first; lists are fine for discrete items, decisions, or action points.
 - Documents, specs, reports, technical writing: structure is expected. Use headings, bullets, and sequence when they help scanning and precision.
 - Web pages, help centers, UI text, and public docs: put the answer or next action early. Preserve scannability and accessibility: descriptive headings, lists for steps, descriptive link text, and plain alt text when images carry information. Do not flatten useful structure just to avoid looking templated.
 - Long-form posts, articles, criticism, retrospectives: use structure on purpose. Pick an angle. Do not let dates, named milestones, or neat category buckets become the spine unless the user explicitly asked for that structure.
 
+In markdown destined for a repo, an editor, or a plain-text pipeline, prefer straight ASCII quotes and apostrophes. Curly quotes, curly apostrophes, and single-character ellipses read like pasted or auto-formatted text. They are fine in typeset or publication-facing prose. If text arrived by copy-paste, normalize it first.
+
 ## Safety rails
 
-These are not AI tells by themselves: em dashes, semicolons, `however`, competent punctuation, well-formed paragraphs, and the right word even if it appears on somebody's banned list.
+These are not AI tells by themselves: semicolons, `however`, competent punctuation, and well-formed paragraphs.
 
 Do not invent typos. Do not break grammar on purpose. Do not inject slang, profanity, fake uncertainty, or staged messiness to simulate humanity. No mandatory `actually` turn. No manufactured negativity. No programmatic sentence-length wobble. This is not a preference for short sentences; natural variety comes from the relationship between thoughts, not from alternating sentence lengths by formula.
 
 Do not make text less usable or less accessible in the name of sounding less AI-written. Removing needed headings, lists, descriptive links, citations, caveats, or next steps is not a style improvement.
 
-The recurring problem is regularity and mismatch, not any one feature. Use em dashes where they belong; do not reach for them as a default connective. If you keep using the same punctuation move in the same role, vary it rather than banning it. In casual internet prose, paragraph-after-paragraph em dashes are now a socially recognized AI cue, so prefer commas, colons, conjunctions, subordinate clauses, or full stops unless the dash clearly earns its keep. A full stop is not the automatic replacement; sometimes the fix is to make the relationship between the clauses clearer. For temporary compound modifiers, hyphenate before the noun and usually open after it; do not let the model turn every compound into a hyphenated unit.
+The recurring problem is regularity and mismatch, not any one feature. If you keep using the same punctuation move in the same role, vary it rather than banning it. When a connective needs replacing, a full stop is not the automatic substitute; usually the fix is to make the relationship between the clauses explicit rather than to split them. For temporary compound modifiers, hyphenate before the noun and usually open after it; do not let the model turn every compound into a hyphenated unit.
 
 ## Core rules
 
@@ -113,7 +119,7 @@ Avoid keynote cadence, mission-statement phrasing, applause-line endings, and ce
 
 ### 8. Calibrate confidence, stance, and voice to genre
 
-Be confident where evidence is strong. Be explicit where it is weak or interpretive. If the genre normally carries a visible writer - review, opinion, comment reply, personal post - let the writer appear. If the genre normally aims at neutrality - summary, documentation, news-style reporting - do not inject first person or attitude just to make the piece feel human. If the subject naturally invites a view, do not sand everything down to evenly polite neutrality. If the subject does not require a view, do not manufacture one. For public, technical, product, or instructional writing, keep language globally legible and inclusive; avoid culturally specific jokes, ableist figures of speech, and slang unless the audience and medium genuinely call for them.
+Be confident where evidence is strong. Be explicit where it is weak or interpretive. If the genre normally carries a visible writer - review, opinion, comment reply, personal post - let the writer appear. If the genre normally aims at neutrality - summary, documentation, news-style reporting - do not inject first person or attitude just to make the piece feel human. If the subject naturally invites a view, do not sand everything down to evenly polite neutrality. If the subject does not require a view, do not manufacture one. For public, technical, product, or instructional writing, keep language globally legible and inclusive; avoid culturally specific jokes, ableist figures of speech, and slang unless the audience and medium call for them.
 
 ### 9. Show concrete things before generalizing
 
@@ -238,7 +244,7 @@ These are fallback heuristics, not targets to optimize for.
 
 ## Optional audit reference
 
-These are not bans. They are quick places to scan when default LLM writing slips into formula.
+These are not bans. They are quick places to scan when default LLM writing slips into formula. It covers what needs judgment; purely mechanical string bans are enforced elsewhere and are not repeated here.
 
 ### Formula phrases and sentence moves to scrutinize
 
@@ -252,8 +258,6 @@ These are not bans. They are quick places to scan when default LLM writing slips
 - `dive deep into`
 - `embark on a journey`
 - `navigate` used as a vague metaphor
-- `It's not X, it's Y`
-- `Not because X, but because Y`
 - `What matters is...`
 - `The real issue is...`
 - `This is not just..., it is...`
@@ -271,7 +275,6 @@ These are not bans. They are quick places to scan when default LLM writing slips
 - one-thought-per-sentence strings where adjacent claims should be coordinated or subordinated
 - fake-human hedge chains (`I think... maybe... sort of`) when the uncertainty is not real
 - forced register lowering or inserted slang
-- decorative emoji and checkmark bullets in prose contexts
 - generic-to-the-platform replies that reference nothing specific to the actual conversation
 
 ### Jargon defaults to scrutinize
@@ -303,7 +306,6 @@ Use only when they are plainly the right words, not because the model fell into 
 - `enhance`
 - `showcase`
 - `boast` / `boasts`
-- `substrate`
 
 The problem is repeated fallback diction, not the existence of any one word.
 
