@@ -8,23 +8,6 @@ The goal is prose that fits the medium, the task, and the reader. If it does tha
 
 Some rules below are prose-quality defaults. Some target common chatbot defaults. They are not the same thing.
 
-## Scope: long-form only
-
-This ruleset is for pieces with room to develop: documents, specs, reports, technical writing, public docs, articles, criticism, retrospectives, PR descriptions, and long-form posts.
-
-It does not apply to short-form. Chat messages, DMs, comments, replies, and one-paragraph emails are out of scope; write those normally and do not run these checks on them. Several rules here, e.g. developed thought, through-line, paragraph spread, assume a piece long enough to have a shape, and forcing them onto a three-sentence reply makes it worse.
-
-## Precedence
-
-When rules conflict:
-1. Truth, safety, accessibility, and platform/legal requirements
-2. Explicit user instructions
-3. Genre and medium norms
-4. Core rules
-5. Optional watchlists and heuristics
-
-If the user asks for bullets, use bullets. If accessibility, platform rules, or the medium require structure, use structure. If the user asks for a neutral summary, do not force first person or extra stance into it.
-
 ## Scope
 
 This document is for drafting and revising text. It is not a reliable method for deciding whether existing text was written by a human or an AI, and it is not an authorship-adjudication tool. In high-stakes settings, provenance beats surface style; see `Provenance in high-stakes contexts` below.
@@ -36,25 +19,7 @@ This document is for drafting and revising text. It is not a reliable method for
 3. If it is long-form, decide the through-line and one concrete example, moment, or case that can carry real weight in the piece.
 4. Draft to fit that context, not an abstract idea of "good writing."
 5. Run the required checks for the length and stakes of the piece.
-6. Cut what sounds generic, ceremonial, over-engineered, suspiciously over-specific, or too cleanly modular.
-
-## Medium routing
-
-- Documents, specs, reports, technical writing: structure is expected. Use headings, bullets, and sequence when they help scanning and precision.
-- Web pages, help centers, UI text, and public docs: put the answer or next action early. Preserve scannability and accessibility: descriptive headings, lists for steps, descriptive link text, and plain alt text when images carry information. Do not flatten useful structure just to avoid looking templated.
-- Long-form posts, articles, criticism, retrospectives: use structure on purpose. Pick an angle. Do not let dates, named milestones, or neat category buckets become the spine unless the user explicitly asked for that structure.
-
-In markdown destined for a repo, an editor, or a plain-text pipeline, prefer straight ASCII quotes and apostrophes. Curly quotes, curly apostrophes, and single-character ellipses read like pasted or auto-formatted text. They are fine in typeset or publication-facing prose. If text arrived by copy-paste, normalize it first.
-
-## Safety rails
-
-These are not AI tells by themselves: semicolons, `however`, competent punctuation, and well-formed paragraphs.
-
-Do not invent typos. Do not break grammar on purpose. Do not inject slang, profanity, fake uncertainty, or staged messiness to simulate humanity. No mandatory `actually` turn. No manufactured negativity. No programmatic sentence-length wobble. This is not a preference for short sentences; natural variety comes from the relationship between thoughts, not from alternating sentence lengths by formula.
-
-Do not make text less usable or less accessible in the name of sounding less AI-written. Removing needed headings, lists, descriptive links, citations, caveats, or next steps is not a style improvement.
-
-The recurring problem is regularity and mismatch, not any one feature. If you keep using the same punctuation move in the same role, vary it rather than banning it. When a connective needs replacing, a full stop is not the automatic substitute; usually the fix is to make the relationship between the clauses explicit rather than to split them. For temporary compound modifiers, hyphenate before the noun and usually open after it; do not let the model turn every compound into a hyphenated unit.
+6. Cut what sounds generic, ceremonial, over-engineered, or suspiciously over-specific.
 
 ## Core rules
 
@@ -78,13 +43,6 @@ What counts:
 - a checkable detail
 - in criticism, reporting, and reviews: a user-facing, reader-facing, or otherwise observed detail of what changed in practice
 
-What does not count:
-- `many`, `various`, `several`, `a lot of`
-- `in ways that mattered`, `meaningful changes`, `broad implications`
-- `the standard X arc`, `the usual pattern`, `as is often the case`
-- vague intensifiers in place of claims: `essentially`, `fundamentally`, `ultimately`
-- milestone names, dates, titles, organization names, or feature labels standing alone with no material consequence attached
-
 If the most concrete thing in a paragraph is a name and a date, the paragraph is still probably too generic.
 
 ### 4. Specificity must be earned
@@ -104,6 +62,8 @@ If you cannot verify a claim, attribute it, soften it, or cut it.
 ### 5. Use plain words. Allow ordinary repetition. Prefer verbs.
 
 Do not chase synonyms for basic words like `problem`, `change`, `system`, `work`, or `people`. Repeat the ordinary word when it is the right word. Prefer `we changed it` to `the implementation of the change`, `latency dropped` to `a reduction in latency was observed`, and `applying the rule` to `the application of the rule`. Prefer actions happening to people over abstractions being observed by systems.
+
+Watch the verbs that stand in for a claim rather than making one. `serves as`, `stands as`, `reflects`, `symbolizes`, `showcases`, `highlights`, `underscores`, and metaphorical `navigate` usually attach generic significance to something instead of saying what it did. Use `is` or `has` when that is the claim, and name the consequence when there is one.
 
 ### 6. Cohere through reference and sentence shape
 
@@ -241,79 +201,6 @@ These are fallback heuristics, not targets to optimize for.
 - Choppy -> connected. Avoid: `The term does real work. It names a pattern that was floating unnamed.` Prefer: `The term does real work: it names a pattern that was floating unnamed.`
 - False crispness -> carried relationship. Avoid: `The uncertainty is real. The confident register wrapping it is a default.` Prefer: `The uncertainty is real, but the confident register wrapping it is a default.`
 - Period-as-dash replacement -> clearer clause relation. Avoid: `The post would land harder. It should stop at the number and draw the consequence directly.` Prefer: `The post would land harder if it stopped at the number and drew the consequence directly.`
-
-## Optional audit reference
-
-These are not bans. They are quick places to scan when default LLM writing slips into formula.
-
-### Formula phrases and sentence moves to scrutinize
-
-- `It's important to note that`
-- `It's worth noting that`
-- `When it comes to`
-- `In conclusion`
-- `in today's fast-paced world`
-- `ever-evolving landscape`
-- `at the end of the day`
-- `dive deep into`
-- `embark on a journey`
-- `navigate` used as a vague metaphor
-- `What matters is...`
-- `The real issue is...`
-- `This is not just..., it is...`
-- `is a testament to`
-- `serves as` / `stands as` when `is` or `has` would be clearer
-- `plays a key role` / `plays a pivotal role`
-- `reflects broader`, `symbolizes`, `showcases`, `highlights`, or `underscores` when attached to generic significance rather than evidence
-- vague source laundering: `experts say`, `observers note`, `research suggests`, `critics argue`, `many believe`
-- unsupported causality: `drove`, `proved`, `showed that`, `made clear that`, `tracked with`, `led directly to`
-- `X today is not the X it was at the start`
-- `found its feet` / `found its identity`
-- `proof of concept`
-- paragraph-closing type definitions (`the kind of X where Y`)
-- persuasive three-part cadence or triadic rhythm used by reflex (`clearer, faster, cheaper`)
-- one-thought-per-sentence strings where adjacent claims should be coordinated or subordinated
-- fake-human hedge chains (`I think... maybe... sort of`) when the uncertainty is not real
-- forced register lowering or inserted slang
-- generic-to-the-platform replies that reference nothing specific to the actual conversation
-
-### Jargon defaults to scrutinize
-
-Use only when they are plainly the right words, not because the model fell into them:
-- `delve into`
-- `tapestry`
-- `realm`
-- `leverage`
-- `harness`
-- `foster`
-- `empower`
-- `unlock`
-- `unveil`
-- `vibrant`
-- `crucial`
-- `pivotal`
-- `compelling`
-- `robust`
-- `seamless`
-- `holistic`
-- `multifaceted`
-- `paradigm-shifting`
-- `underscore`
-- `testament`
-- `valuable insights`
-- `rich`
-- `profound`
-- `enhance`
-- `showcase`
-- `boast` / `boasts`
-
-The problem is repeated fallback diction, not the existence of any one word.
-
-### Formatting artifacts in plain text to scrutinize
-
-- smart quotes and curly apostrophes
-- single-character ellipses
-- other visible copy-paste formatting artifacts that do not fit the medium
 
 ## Provenance in high-stakes contexts
 
