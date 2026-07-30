@@ -10,7 +10,7 @@ Some rules below are prose-quality defaults. Some target common chatbot defaults
 
 ## Scope
 
-This document is for drafting and revising text. It is not a reliable method for deciding whether existing text was written by a human or an AI, and it is not an authorship-adjudication tool. In high-stakes settings, provenance beats surface style; see `Provenance in high-stakes contexts` below.
+This document is for drafting and revising text. It is not a reliable method for deciding whether existing text was written by a human or an AI, and it is not an authorship-adjudication tool. In high-stakes settings, provenance beats surface style: draft history, revision history, source traces, and citations that actually support their claims.
 
 ## Core workflow
 
@@ -25,11 +25,11 @@ This document is for drafting and revising text. It is not a reliable method for
 
 ### 1. Anchor to the actual context before drafting
 
-Decide what the text is, who it is for, what register it uses, what answer or next action the reader needs, and, in replies, what thread, person, or community it is responding to. A reply that could be pasted into any thread on the same topic will often read generic even if the prose is clean. Keep register stable across the piece.
+Decide what the text is, who it is for, what register it uses, and what answer or next action the reader needs. A piece that could be pasted into any project on the same topic will read generic even if the prose is clean. Keep register stable throughout.
 
 ### 2. Fit the format to the medium
 
-Format is part of register. Over-structuring casual writing makes it feel templated. Under-structuring technical writing makes it harder to use. Match the format to the medium instead of obeying a global ban on bullets, headers, or emphasis.
+Format is part of register. Under-structuring technical writing makes it harder to use; over-structuring an essay makes it feel templated. Match the format to the genre instead of obeying a global ban on bullets, headers, or emphasis.
 
 ### 3. Prefer concrete specificity over polished generality
 
@@ -83,7 +83,7 @@ Be confident where evidence is strong. Be explicit where it is weak or interpret
 
 ### 9. Show concrete things before generalizing
 
-Do not open with abstract diagnosis when the reader has nothing concrete to attach it to. This is not a ban on leading with the conclusion in web, docs, email, news, or task-oriented writing; if you lead with the conclusion, make it concrete enough to be useful. Usually the order should be:
+Do not open with abstract diagnosis when the reader has nothing concrete to attach it to. This is not a ban on leading with the conclusion in docs, reports, or task-oriented writing; if you lead with the conclusion, make it concrete enough to be useful. Usually the order should be:
 1. what happened
 2. where the pattern appeared
 3. what constraint mattered
@@ -151,39 +151,21 @@ Do not give one paragraph to each milestone or one paragraph to each topic bucke
 
 Re-read as a first-time reader. Cut anything that is auditioning. Cut sentences whose only job is to announce the next sentence. Collapse paragraphs that restate each other. Replace the most generic clause in the piece with something specific or delete it. Most edits should make the text shorter, but do not confuse concision with chopping: combining two tightly related sentences can be the cleaner edit when it restores the relationship between the thoughts.
 
+Re-read one paragraph slowly. If it sounds like a press release, an investor memo, or an encyclopedia entry, flatten it.
+
 ## Required checks
 
-For pieces up to about 150 words or three short paragraphs, run checks 1-5, 7, and 10. For longer pieces, run all checks.
-
-1. Register fit. Does the format, punctuation, formatting, and level of structure match the medium and the user's request? For web, docs, or UI text, did you preserve scannability and accessibility instead of flattening the piece for style reasons?
+1. Register fit. Does the format, punctuation, formatting, and level of structure match the genre and the user's request? For docs and public pages, did you preserve scannability and accessibility instead of flattening the piece for style reasons?
 2. Concrete-anchor audit. For each substantial paragraph, point to one concrete anchor. In criticism, reportage, reviews, and analysis, at least one paragraph in the whole piece should be built around a single concrete example or observed consequence rather than category summary. If you cannot point to that paragraph, add one.
-3. Fact discipline. Pick the three most fragile factual claims in the piece: dates, milestone names, quotes, close paraphrases, public metrics, future claims, causal trend claims, feature labels, motives, hidden system explanations, or claims sourced to vague authorities. If you cannot vouch for them, attribute them, soften them, or cut them. If a citation or source is present, confirm it supports the exact claim rather than a nearby topic.
-4. Source-fit check. For factual writing, check every exact quote, close paraphrase, public metric, planned/future event, and causal claim. Do not keep `X caused Y`, `X drove Y`, `X proved Y`, or `X tracked with Y` unless the source supports the relationship. Use weaker relationship language only when that weaker claim is still accurate.
-5. Regularity and sentence-continuity tripwire. Name the single most repeated visible pattern in the piece. If the same move appears 3 or more times, or dominates two consecutive paragraphs, rewrite at least one occurrence. Also scan for false crispness: two or more neighboring short sentences whose thoughts are tightly related but split apart. If a comma, conjunction, subordinate clause, colon, or semicolon would express the relationship more naturally, combine one pair. If the period creates useful emphasis or clarity, keep it.
-6. Repeated-frame check. If a central metaphor, contrast, or wording family appears throughout the piece, decide whether it is a useful motif or a too-neat scaffold. Keep it only where it adds force; vary or cut the rest.
-7. Stance and voice. If the genre expects a visible writer or evaluative stance, state the writer's view in one sentence to yourself. If you cannot, add stance where it does real work. If the genre expects neutrality, did you keep it neutral?
-8. Developed thought. For any piece longer than four paragraphs, identify one place where the prose pauses, doubles back, or notices a concrete detail off the main line. If the piece runs in a perfectly straight line from claim to conclusion, see whether one example or noticed detail would make it less pre-solved.
-9. Shape and spine. For any piece longer than three paragraphs, state the organizing principle in five words or fewer and the controlling claim in one sentence. If the shape is basically `starting state -> changes -> verdict`, if paragraphs map one-to-one with named milestones, or if each paragraph is just one labeled topic bucket, restructure.
-10. Over-correction. Did you add fake-human moves - typos, slang, forced asides, random fragments, or artificial sentence-length targets - just to break a pattern?
+3. Fact discipline. Find the fragile claims: dates, milestone names, quotes, close paraphrases, public metrics, future events, causal claims, motives, and hidden system explanations. For each one, vouch for it, attribute it, soften it, or cut it. Do not keep `X caused Y`, `X drove Y`, or `X tracked with Y` unless the source supports that relationship rather than mere sequence. Where a citation is present, confirm it supports the exact claim and not a nearby topic.
+4. Regularity and sentence-continuity tripwire. Name the single most repeated visible pattern in the piece. If the same move appears 3 or more times, or dominates two consecutive paragraphs, rewrite at least one occurrence. Also scan for false crispness: two or more neighboring short sentences whose thoughts are tightly related but split apart. If a comma, conjunction, subordinate clause, colon, or semicolon would express the relationship more naturally, combine one pair. If the period creates useful emphasis or clarity, keep it.
+5. Repeated-frame check. If a central metaphor, contrast, or wording family appears throughout the piece, decide whether it is a useful motif or a too-neat scaffold. Keep it only where it adds force; vary or cut the rest.
+6. Stance and voice. If the genre expects a visible writer or evaluative stance, state the writer's view in one sentence to yourself. If you cannot, add stance where it does real work. If the genre expects neutrality, did you keep it neutral?
+7. Developed thought. For any piece longer than four paragraphs, identify one place where the prose pauses, doubles back, or notices a concrete detail off the main line. If the piece runs in a perfectly straight line from claim to conclusion, see whether one example or noticed detail would make it less pre-solved.
+8. Shape and spine. For any piece longer than three paragraphs, state the organizing principle in five words or fewer and the controlling claim in one sentence. If the shape is basically `starting state -> changes -> verdict`, if paragraphs map one-to-one with named milestones, or if each paragraph is just one labeled topic bucket, restructure.
+9. Over-correction. Did you add fake-human moves - typos, slang, forced asides, random fragments, or artificial sentence-length targets - just to break a pattern?
 
 These are tripwires, not goals. Use them to catch genericity, visible regularity, false specificity, and modular structure, not to manufacture variation for its own sake. These checks are for revision, not for visible self-reporting. Do not output the audit unless asked.
-
-## Optional long-form diagnostics
-
-Use these only when the required checks are not enough for a longer piece.
-- Paragraph spread. Count sentences in each paragraph. If nearly all land at the same count, vary one.
-- Sentence spread. Compare the shortest and longest sentences. If everything sits in the same medium band, vary one.
-- Sentence architecture audit. Look at sentence types, not only length. If most sentences are simple declaratives, combine one pair of close thoughts with coordination or subordination. If every sentence starts fresh instead of carrying reference forward, revise one sentence so it begins from the previous thought and ends with the new one.
-- Punctuation audit. If em dashes, colons, or parentheticals keep doing the same job, swap some for commas or full stops.
-- Lead audit. In web, docs, email, or task-oriented text, is the answer or requested action visible early? In analysis or criticism, is the first general claim tied to concrete evidence soon enough?
-- Hidden-list audit. Count sentences whose main work is listing three or more parallel items. If three or more sentences do list work, rewrite at least one around a single consequence, contrast, or example.
-- Causality audit. Mark every sentence claiming that one thing caused, proved, drove, enabled, prevented, or explained another. If the evidence only supports sequence or correlation, weaken the relationship.
-- Motif audit. If the same image, opposition, or repeated wording carries the piece, remove at least one instance unless each recurrence changes the argument.
-- Cadence check. Re-read one paragraph slowly. If it sounds like a press release, investor memo, or encyclopedia entry, flatten it.
-- Catalog audit. If one paragraph names three or more terms, features, or labels from the same milestone, or jumps through multiple milestones in short order, rewrite around one consequence instead.
-- Bucket audit. If you can label each paragraph with a clean category heading and those labels barely overlap, the piece is too modular. Cross-wire at least one paragraph.
-
-These are fallback heuristics, not targets to optimize for.
 
 ## Examples of useful corrections
 
@@ -196,19 +178,5 @@ These are fallback heuristics, not targets to optimize for.
 - Causal overreach -> relationship restraint. Avoid: `The redesign drove trust higher.` Prefer: `After the redesign, refund questions fell in the support queue.` If trust was not measured, do not claim it moved.
 - Future certainty -> sourced timing. Avoid: `The next revision arrives in April.` Prefer: `The next revision is scheduled for April, according to the published roadmap.` If the source is old or tentative, say `planned` or cut the date.
 - Catalog prose -> argument prose. Avoid: `First came change A, then change B, then change C.` Prefer: `The important shift was not that the thing accumulated more pieces. It was that later changes finally introduced friction where the earlier version let people coast.`
-- System-tour prose -> cross-wired prose. Avoid: one paragraph for `background`, one for `process`, one for `impact`, then a verdict. Prefer: trace one recurring constraint, show how it appears across the piece, and make the paragraphs depend on each other.
 - Rushed linearity -> developed thought. Avoid: `The plan changed. Results improved. Therefore it worked.` Prefer: `Results improved only after the review queue changed, which is why the earlier numbers were misleading.`
-- Choppy -> connected. Avoid: `The term does real work. It names a pattern that was floating unnamed.` Prefer: `The term does real work: it names a pattern that was floating unnamed.`
 - False crispness -> carried relationship. Avoid: `The uncertainty is real. The confident register wrapping it is a default.` Prefer: `The uncertainty is real, but the confident register wrapping it is a default.`
-- Period-as-dash replacement -> clearer clause relation. Avoid: `The post would land harder. It should stop at the number and draw the consequence directly.` Prefer: `The post would land harder if it stopped at the number and drew the consequence directly.`
-
-## Provenance in high-stakes contexts
-
-If authorship matters, stronger signals than surface style include:
-- draft history
-- revision history
-- citations that actually support the claims made
-- notes, outlines, and source traces
-- disclosed AI use when it occurred
-
-Use surface-style checks to improve prose. Use provenance to support authorship claims.
