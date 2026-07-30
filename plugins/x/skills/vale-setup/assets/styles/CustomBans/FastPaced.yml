@@ -1,0 +1,8 @@
+extends: existence
+message: "Avoid the filler opener '%s'. Start with the actual claim."
+level: error
+ignorecase: true
+tokens:
+  - 'in today[''’]s fast-paced world'
+  - 'ever-evolving landscape'
+  - 'at the end of the day'

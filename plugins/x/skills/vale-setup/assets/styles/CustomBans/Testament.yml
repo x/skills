@@ -1,0 +1,6 @@
+extends: existence
+message: "Avoid '%s'. State the observable consequence instead of the tribute."
+level: error
+ignorecase: true
+tokens:
+  - a testament

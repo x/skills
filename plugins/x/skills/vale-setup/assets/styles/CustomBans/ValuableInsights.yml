@@ -1,0 +1,8 @@
+extends: existence
+message: "Avoid the stock phrase '%s'. Name the actual insight, thing, or change."
+level: error
+ignorecase: true
+tokens:
+  - valuable insights
+  - tapestry
+  - paradigm-shifting

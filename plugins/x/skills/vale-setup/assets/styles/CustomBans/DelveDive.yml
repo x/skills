@@ -1,0 +1,8 @@
+extends: existence
+message: "Avoid '%s'. Just say what you are doing, e.g. 'look at', 'read', 'start'."
+level: error
+ignorecase: true
+tokens:
+  - delve into
+  - dive deep into
+  - embark on a journey

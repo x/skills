@@ -1,0 +1,6 @@
+extends: existence
+message: "Avoid '%s'. Say what the thing actually did."
+level: error
+ignorecase: true
+tokens:
+  - 'play(s|ed)? an? (key|pivotal|crucial|vital|central|important) role'
