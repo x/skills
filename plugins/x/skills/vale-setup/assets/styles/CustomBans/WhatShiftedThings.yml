@@ -1,0 +1,6 @@
+extends: existence
+message: "Avoid using '%s' as a rhetorical transition"
+level: error
+ignorecase: true
+tokens:
+  - what shifted things

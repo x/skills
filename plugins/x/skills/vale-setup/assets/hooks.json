@@ -1,0 +1,28 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "mcp__google-drive__.*|mcp__notion__.*|mcp__claude_ai_Linear__.*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "command -v vale >/dev/null 2>&1 || exit 0; t=$(jq -r '[.tool_input.content,.tool_input.text,.tool_input.html,.tool_input.markdown,.tool_input.new_str,.tool_input.description,.tool_input.body,.tool_input.title,.tool_input.name,(.tool_input.pages[]?|.content),(.tool_input.content_updates[]?|.new_str)]|map(select(type==\"string\" and .!=\"\"))|.[]' 2>/dev/null); [ -n \"$t\" ] || exit 0; o=$(printf '%s\\n' \"$t\" | vale --ext=.md) || { printf 'Vale blocked this MCP write: outgoing content violates a CustomBans rule. Fix the tool arguments and retry.\\n%s\\n' \"$o\" >&2; exit 2; }",
+          "timeout": 60,
+          "statusMessage": "vale lint (mcp)"
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "Edit|Write|MultiEdit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "f=$(jq -r '.tool_input.file_path // .tool_response.filePath'); case \"$f\" in *.md|*.txt) command -v vale >/dev/null 2>&1 || exit 0; vale \"$f\" 1>&2 || exit 2 ;; esac",
+          "timeout": 60,
+          "statusMessage": "vale lint"
+        }
+      ]
+    }
+  ]
+}
